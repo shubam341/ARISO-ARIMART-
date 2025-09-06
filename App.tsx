@@ -1,10 +1,19 @@
+import React from 'react';
+import { StyleSheet, Text, View, Button, Platform } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const handlePress = () => {
+    alert('Button Pressed!');
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={styles.title}>Hello Expo!</Text>
+      <Text style={styles.subtitle}>
+        Running on {Platform.OS.toUpperCase()}
+      </Text>
+      <Button title="Click Me" onPress={handlePress} />
       <StatusBar style="auto" />
     </View>
   );
@@ -16,5 +25,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    marginBottom: 12,
+  },
+  subtitle: {
+    fontSize: 18,
+    marginBottom: 20,
+    color: '#555',
   },
 });
