@@ -5,8 +5,10 @@ node_modules/
 
 # Expo
 .expo/
+.expo-shared/
 dist/
 web-build/
+*.expo
 expo-env.d.ts
 
 # Native
@@ -26,12 +28,17 @@ npm-debug.*
 yarn-debug.*
 yarn-error.*
 
-# macOS
+# macOS / Windows
 .DS_Store
+Thumbs.db
 *.pem
 
 # local env files
+.env
 .env*.local
 
 # typescript
 *.tsbuildinfo
+
+# Vercel / build
+.vercel/
